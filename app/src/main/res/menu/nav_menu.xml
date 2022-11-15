@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/acc_fragment"
+        android:icon="@drawable/ic_baseline_smartphone_24"
+        android:title="Accelerometer"/>
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/gps_fragment"
+        android:icon="@drawable/ic_baseline_gps_fixed_24"
+        android:title="GPS"/>
+
+</menu>
