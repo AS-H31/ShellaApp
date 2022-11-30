@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.gps_fragment ->{
                     loadFragment(GpsFragment())
+                    //loadActivity(AbdoLocationActivity())
                     return@setOnItemReselectedListener
                 }
 
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         transaction.commit()
     }
 
-    private fun loadActivity(activity: Activity){
+    private fun loadActivity(activity: Activity) {
         val intent = Intent(this, activity::class.java)
         startActivity(intent)
     }
