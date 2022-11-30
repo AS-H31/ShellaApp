@@ -1,5 +1,7 @@
 package com.shella.shellaapp
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +13,7 @@ import com.shella.shellaapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var bottomNav : NavigationBarView
+    private lateinit var bottomNav : NavigationBarView
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.gps_fragment ->{
                     loadFragment(GpsFragment())
+                    //loadActivity(AbdoLocationActivity())
                     return@setOnItemReselectedListener
                 }
 
@@ -50,6 +53,11 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
+    }
+
+    private fun loadActivity(activity: Activity) {
+        val intent = Intent(this, activity::class.java)
+        startActivity(intent)
     }
 
 }
