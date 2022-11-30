@@ -32,7 +32,7 @@ class GpsFragment : Fragment() {
         val supportMapFragment =
             childFragmentManager.findFragmentById(R.id.google_map) as? SupportMapFragment
 
-
+        //testComment
         //zoom in to the location
         supportMapFragment?.getMapAsync {
             it.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng(31.2001, 29.9187), 10f))
