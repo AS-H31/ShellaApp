@@ -1,8 +1,5 @@
 package com.shella.shellaapp
 
-import android.content.Context.MODE_PRIVATE
-import android.content.SharedPreferences
-import android.location.Location
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,8 +21,8 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class GpsFragment : Fragment() {
-    var sharedPreferences: SharedPreferences = requireActivity().getSharedPreferences("sharedPrefs", MODE_PRIVATE)
-    var editor: SharedPreferences.Editor = sharedPreferences.edit()
+    //var sharedPreferences: SharedPreferences = requireActivity().getSharedPreferences("sharedPrefs", MODE_PRIVATE)
+    //var editor: SharedPreferences.Editor = sharedPreferences.edit()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -64,9 +61,19 @@ class GpsFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_gps, container, false)
     }
 
+/*
     private fun saveDataLocally(location: Location) {
         val timestamp = System.currentTimeMillis()
         editor.putStringSet(timestamp.toString(), setOf(location.latitude.toString(), location.longitude.toString()))
         editor.commit()
     }
+    private fun loadDataLocally() {
+        val dataDictionary = sharedPreferences.all
+        val data = sharedPreferences.all
+        for (key in data.keys) {
+            val value = data[key]
+
+        }
+    }*/
+
 }
