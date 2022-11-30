@@ -13,7 +13,7 @@ import com.shella.shellaapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var bottomNav : NavigationBarView
+    lateinit var bottomNav : NavigationBarView
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
