@@ -1,5 +1,7 @@
 package com.shella.shellaapp
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -50,6 +52,11 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
+    }
+
+    private fun loadActivity(activity: Activity){
+        val intent = Intent(this, activity::class.java)
+        startActivity(intent)
     }
 
 }
